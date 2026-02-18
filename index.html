@@ -1,421 +1,386 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Math Alarm - La alarma inteligente que despierta tu cerebro. Resuelve problemas matemáticos para apagar la alarma. Desarrollada por r0drig0Dev0ps."
-    />
-    <meta
-      name="keywords"
-      content="Math Alarm, Android App, alarm clock, math, despertador, r0drig0Dev0ps"
-    />
-    <meta name="author" content="r0drig0Dev0ps" />
-    <title>Math Alarm | r0drig0Dev0ps</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="r0drig0Dev0ps — Android Developer. Portfolio personal con proyectos y aplicaciones móviles.">
+    <meta name="keywords" content="Android Developer, mobile apps, Kotlin, Java, r0drig0Dev0ps, portfolio">
+    <meta name="author" content="r0drig0Dev0ps">
+    <title>r0drig0Dev0ps | Android Developer</title>
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="app_icon.png" />
+    <link rel="icon" type="image/png" href="app_icon.png">
 
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
     <!-- Floating particles background -->
     <div class="particles" id="particles"></div>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-      <div class="nav-container">
-        <a href="#" class="nav-logo">
-          <img src="app_icon.png" alt="Math Alarm" class="nav-icon" />
-          <span>Math Alarm</span>
-        </a>
-        <ul class="nav-links">
-          <li><a href="#features">Features</a></li>
-          <li><a href="#how-it-works">How It Works</a></li>
-          <li><a href="#tech">Tech Stack</a></li>
-          <li><a href="#developer">Developer</a></li>
-        </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>r0drig0<span class="logo-highlight">Dev0ps</span><span class="logo-bracket"> /&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-      <div class="hero-content">
-        <div class="hero-text">
-          <div class="hero-badge">
-            <i class="fas fa-rocket"></i>
-            Android App
-          </div>
-          <h1>
-            Wake Up <span class="gradient-text">Smarter</span>,<br />
-            Not <span class="gradient-text-alt">Harder</span>
-          </h1>
-          <p class="hero-description">
-            Math Alarm is the intelligent alarm clock that activates your brain
-            before you even get out of bed. Solve math challenges to dismiss —
-            no more snoozing!
-          </p>
-          <div class="hero-buttons">
-            <a
-              href="https://github.com/r0drig0Dev0ps/MathAlarm"
-              target="_blank"
-              class="btn btn-primary"
-            >
-              <i class="fab fa-github"></i>
-              View on GitHub
-            </a>
-            <a href="#features" class="btn btn-secondary">
-              <i class="fas fa-arrow-down"></i>
-              Learn More
-            </a>
-          </div>
-          <div class="hero-stats">
-            <div class="stat">
-              <span class="stat-number" data-count="3">0</span>
-              <span class="stat-label">Difficulty Levels</span>
-            </div>
-            <div class="stat">
-              <span class="stat-number" data-count="10">0</span>
-              <span class="stat-label">Core Components</span>
-            </div>
-            <div class="stat">
-              <span class="stat-number">∞</span>
-              <span class="stat-label">Math Problems</span>
-            </div>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <div class="phone-mockup">
-            <div class="phone-notch"></div>
-            <div class="phone-screen">
-              <div class="mock-app">
-                <div class="mock-time">07:30</div>
-                <div class="mock-label">ALARM RINGING!</div>
-                <div class="mock-problem">
-                  <span class="mock-equation">12 + 7 = ?</span>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-greeting">
+                    <span class="greeting-wave">👋</span>
+                    <span>Hey, I'm</span>
                 </div>
-                <div class="mock-input">
-                  <div class="mock-answer-box">19</div>
+                <h1>
+                    <span class="name-line">Rodrigo</span>
+                    <span class="role-line">
+                        <span class="gradient-text">Android Developer</span>
+                    </span>
+                </h1>
+                <p class="hero-description">
+                    I build native Android apps that solve real-world problems. 
+                    Passionate about clean architecture, intuitive UX, and shipping products that people actually use.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        View My Work
+                    </a>
+                    <a href="https://github.com/r0drig0Dev0ps" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
                 </div>
-                <div class="mock-btn-dismiss">DISMISS</div>
-              </div>
+
+                <!-- Terminal-style intro -->
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <span class="terminal-title">r0drig0@dev ~ </span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="cmd" id="typingText"></span>
+                            <span class="cursor">|</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="floating-icon fi-1"><i class="fas fa-plus"></i></div>
-          <div class="floating-icon fi-2"><i class="fas fa-minus"></i></div>
-          <div class="floating-icon fi-3"><i class="fas fa-times"></i></div>
-          <div class="floating-icon fi-4"><i class="fas fa-brain"></i></div>
-          <div class="floating-icon fi-5"><i class="fas fa-bell"></i></div>
+            <div class="hero-visual">
+                <div class="avatar-container">
+                    <div class="avatar-glow"></div>
+                    <div class="avatar-ring">
+                        <img src="https://avatars.githubusercontent.com/u/140133495?v=4" alt="r0drig0Dev0ps" 
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="avatar-fallback" style="display:none;">
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                    </div>
+                    <!-- Orbiting icons -->
+                    <div class="orbit">
+                        <div class="orbit-icon oi-1"><i class="fab fa-android"></i></div>
+                        <div class="orbit-icon oi-2"><i class="fab fa-java"></i></div>
+                        <div class="orbit-icon oi-3"><i class="fas fa-database"></i></div>
+                        <div class="orbit-icon oi-4"><i class="fas fa-code"></i></div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="scroll-indicator">
-        <div class="mouse">
-          <div class="wheel"></div>
+        <div class="scroll-indicator">
+            <div class="mouse"><div class="wheel"></div></div>
         </div>
-      </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Features</span>
-          <h2>
-            Everything You Need to <span class="gradient-text">Wake Up</span>
-          </h2>
-          <p>
-            Designed to make mornings productive from the very first second.
-          </p>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2>Who Am <span class="gradient-text">I</span></h2>
+            </div>
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-text">
+                        <p>
+                            I'm an <strong>Android developer</strong> who blends a passion for mobile development 
+                            with a <strong>DevOps mindset</strong>. I believe in building apps that are not only 
+                            functional but delightful to use.
+                        </p>
+                        <p>
+                            From concept to deployment, I enjoy every phase of the development cycle. 
+                            I focus on <strong>clean architecture</strong>, <strong>Material Design</strong>, 
+                            and delivering apps that solve problems people face every day.
+                        </p>
+                        <p>
+                            When I'm not coding, I'm exploring new technologies, automating workflows, 
+                            or thinking about how to make the next app even better.
+                        </p>
+                    </div>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <div class="highlight-icon"><i class="fas fa-mobile-alt"></i></div>
+                            <div>
+                                <h4>Native Android</h4>
+                                <p>Focused on building performant, native experiences</p>
+                            </div>
+                        </div>
+                        <div class="highlight">
+                            <div class="highlight-icon"><i class="fas fa-layer-group"></i></div>
+                            <div>
+                                <h4>Clean Architecture</h4>
+                                <p>MVVM, Room, Services — built to scale</p>
+                            </div>
+                        </div>
+                        <div class="highlight">
+                            <div class="highlight-icon"><i class="fas fa-infinity"></i></div>
+                            <div>
+                                <h4>DevOps Mindset</h4>
+                                <p>CI/CD, automation, and continuous improvement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="features-grid">
-          <div class="feature-card" data-aos="fade-up">
-            <div class="feature-icon">
-              <i class="fas fa-brain"></i>
-            </div>
-            <h3>Math Challenges</h3>
-            <p>
-              Random addition, subtraction and multiplication problems that
-              force your brain to engage before dismissing the alarm.
-            </p>
-          </div>
-          <div class="feature-card" data-aos="fade-up">
-            <div class="feature-icon">
-              <i class="fas fa-sliders-h"></i>
-            </div>
-            <h3>Difficulty Levels</h3>
-            <p>
-              Choose from Easy, Medium, or Hard. Scale the challenge to match
-              your morning brain power — or lack thereof.
-            </p>
-          </div>
-          <div class="feature-card" data-aos="fade-up">
-            <div class="feature-icon">
-              <i class="fas fa-bell"></i>
-            </div>
-            <h3>Persistent Alarm</h3>
-            <p>
-              The alarm keeps ringing until you solve the problem correctly. No
-              cheating, no shortcuts, no snoozing.
-            </p>
-          </div>
-          <div class="feature-card" data-aos="fade-up">
-            <div class="feature-icon">
-              <i class="fas fa-music"></i>
-            </div>
-            <h3>Custom Sounds</h3>
-            <p>
-              Pick your alarm sound from the system sound library. Wake up to
-              whatever motivates you most.
-            </p>
-          </div>
-          <div class="feature-card" data-aos="fade-up">
-            <div class="feature-icon">
-              <i class="fas fa-clock"></i>
-            </div>
-            <h3>Multiple Alarms</h3>
-            <p>
-              Set as many alarms as you need. Each one stored securely in a
-              local Room database.
-            </p>
-          </div>
-          <div class="feature-card" data-aos="fade-up">
-            <div class="feature-icon">
-              <i class="fas fa-mobile-alt"></i>
-            </div>
-            <h3>Modern UI</h3>
-            <p>
-              Clean Material Design interface that's intuitive and beautiful.
-              Built following Android best practices.
-            </p>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section class="how-it-works" id="how-it-works">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">How It Works</span>
-          <h2>Simple, Yet <span class="gradient-text-alt">Effective</span></h2>
-          <p>Three steps to never oversleep again.</p>
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Skills</span>
+                <h2>My <span class="gradient-text-alt">Tech Stack</span></h2>
+                <p>Tools and technologies I work with every day.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
+                        <span class="skill-tag"><img src="https://cdn.simpleicons.org/kotlin/7F52FF" alt="" class="skill-icon-img"> Kotlin</span>
+                        <span class="skill-tag"><i class="fas fa-code"></i> XML</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fab fa-android"></i> Android</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Android SDK</span>
+                        <span class="skill-tag">Jetpack Compose</span>
+                        <span class="skill-tag">Material Design</span>
+                        <span class="skill-tag">Room DB</span>
+                        <span class="skill-tag">ViewModel</span>
+                        <span class="skill-tag">LiveData</span>
+                        <span class="skill-tag">AlarmManager</span>
+                        <span class="skill-tag">Services</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="skill-tag">Android Studio</span>
+                        <span class="skill-tag">Gradle</span>
+                        <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="skill-tag">Firebase</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> Principles</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MVVM</span>
+                        <span class="skill-tag">Clean Architecture</span>
+                        <span class="skill-tag">SOLID</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Unit Testing</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="steps">
-          <div class="step">
-            <div class="step-number">01</div>
-            <div class="step-content">
-              <h3>Set Your Alarm</h3>
-              <p>
-                Choose your wake-up time, select difficulty level, and pick your
-                preferred alarm sound.
-              </p>
-            </div>
-            <div class="step-icon">
-              <i class="fas fa-clock"></i>
-            </div>
-          </div>
-          <div class="step-connector"></div>
-          <div class="step">
-            <div class="step-number">02</div>
-            <div class="step-content">
-              <h3>Alarm Rings</h3>
-              <p>
-                When it's time, a math problem appears on screen. The alarm
-                won't stop until you solve it!
-              </p>
-            </div>
-            <div class="step-icon">
-              <i class="fas fa-volume-up"></i>
-            </div>
-          </div>
-          <div class="step-connector"></div>
-          <div class="step">
-            <div class="step-number">03</div>
-            <div class="step-content">
-              <h3>Solve & Rise</h3>
-              <p>
-                Enter the correct answer to dismiss. Your brain is now awake and
-                ready to conquer the day!
-              </p>
-            </div>
-            <div class="step-icon">
-              <i class="fas fa-sun"></i>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- Tech Stack Section -->
-    <section class="tech-stack" id="tech">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Under The Hood</span>
-          <h2>Built With <span class="gradient-text">Modern Tech</span></h2>
-          <p>Crafted with industry-standard tools and best practices.</p>
-        </div>
-        <div class="tech-grid">
-          <div class="tech-card">
-            <i class="fab fa-java"></i>
-            <h4>Java</h4>
-            <p>Core language</p>
-          </div>
-          <div class="tech-card">
-            <i class="fab fa-android"></i>
-            <h4>Android SDK</h4>
-            <p>Native platform</p>
-          </div>
-          <div class="tech-card">
-            <i class="fas fa-database"></i>
-            <h4>Room DB</h4>
-            <p>Local persistence</p>
-          </div>
-          <div class="tech-card">
-            <i class="fas fa-cogs"></i>
-            <h4>AlarmManager</h4>
-            <p>Scheduling</p>
-          </div>
-          <div class="tech-card">
-            <i class="fas fa-layer-group"></i>
-            <h4>MVVM</h4>
-            <p>Architecture</p>
-          </div>
-          <div class="tech-card">
-            <i class="fas fa-palette"></i>
-            <h4>Material Design</h4>
-            <p>UI Framework</p>
-          </div>
-        </div>
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Projects</span>
+                <h2>What I've <span class="gradient-text">Built</span></h2>
+                <p>Apps designed to solve real problems.</p>
+            </div>
 
-        <!-- Architecture Diagram -->
-        <div class="architecture">
-          <h3>App Architecture</h3>
-          <div class="arch-diagram">
-            <div class="arch-layer arch-ui">
-              <div class="arch-label">UI Layer</div>
-              <div class="arch-items">
-                <span>MainActivity</span>
-                <span>MathProblemActivity</span>
-                <span>SettingsActivity</span>
-              </div>
+            <!-- Featured Project: Math Alarm -->
+            <div class="featured-project">
+                <div class="featured-badge"><i class="fas fa-star"></i> Featured Project</div>
+                <div class="featured-content">
+                    <div class="featured-info">
+                        <div class="featured-logo">
+                            <img src="app_icon.png" alt="Math Alarm">
+                        </div>
+                        <h3>Math Alarm</h3>
+                        <p class="featured-tagline">Wake up your brain to shut off the alarm!</p>
+                        <p class="featured-description">
+                            An intelligent alarm clock that forces you to solve math problems 
+                            (addition, subtraction, multiplication) to dismiss the alarm. 
+                            No more snoozing — your brain has to engage before you can go back to sleep.
+                        </p>
+                        <div class="featured-features">
+                            <div class="ff-item"><i class="fas fa-check-circle"></i> Random math challenges</div>
+                            <div class="ff-item"><i class="fas fa-check-circle"></i> 3 difficulty levels</div>
+                            <div class="ff-item"><i class="fas fa-check-circle"></i> Custom alarm sounds</div>
+                            <div class="ff-item"><i class="fas fa-check-circle"></i> Persistent until solved</div>
+                            <div class="ff-item"><i class="fas fa-check-circle"></i> Multiple alarms</div>
+                            <div class="ff-item"><i class="fas fa-check-circle"></i> Room DB persistence</div>
+                        </div>
+                        <div class="featured-tech">
+                            <span>Java</span>
+                            <span>Android SDK</span>
+                            <span>Room</span>
+                            <span>MVVM</span>
+                            <span>AlarmManager</span>
+                            <span>Material Design</span>
+                        </div>
+                        <div class="featured-actions">
+                            <a href="https://github.com/r0drig0Dev0ps" target="_blank" class="btn btn-primary">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="featured-visual">
+                        <div class="phone-mockup">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <div class="mock-app">
+                                    <div class="mock-time">07:30</div>
+                                    <div class="mock-label">ALARM RINGING!</div>
+                                    <div class="mock-problem">
+                                        <span class="mock-equation">12 + 7 = ?</span>
+                                    </div>
+                                    <div class="mock-input">
+                                        <div class="mock-answer-box">19</div>
+                                    </div>
+                                    <div class="mock-btn-dismiss">DISMISS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Architecture Mini -->
+                <div class="featured-arch">
+                    <h4><i class="fas fa-sitemap"></i> Architecture Overview</h4>
+                    <div class="arch-flow">
+                        <div class="arch-node arch-n-ui">
+                            <span class="arch-n-label">UI</span>
+                            <small>MainActivity · MathProblemActivity · SettingsActivity</small>
+                        </div>
+                        <div class="arch-connector"><i class="fas fa-arrow-right"></i></div>
+                        <div class="arch-node arch-n-logic">
+                            <span class="arch-n-label">Logic</span>
+                            <small>MainViewModel · AlarmAdapter</small>
+                        </div>
+                        <div class="arch-connector"><i class="fas fa-arrow-right"></i></div>
+                        <div class="arch-node arch-n-service">
+                            <span class="arch-n-label">Services</span>
+                            <small>AlarmService · AlarmReceiver</small>
+                        </div>
+                        <div class="arch-connector"><i class="fas fa-arrow-right"></i></div>
+                        <div class="arch-node arch-n-data">
+                            <span class="arch-n-label">Data</span>
+                            <small>AppDatabase · AlarmDao · Alarm</small>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
-            <div class="arch-layer arch-logic">
-              <div class="arch-label">Logic Layer</div>
-              <div class="arch-items">
-                <span>MainViewModel</span>
-                <span>AlarmAdapter</span>
-              </div>
+
+            <!-- More projects placeholder -->
+            <div class="more-projects">
+                <h3>More coming soon...</h3>
+                <p>I'm always working on new ideas. Stay tuned for upcoming projects!</p>
+                <div class="coming-soon-cards">
+                    <div class="cs-card">
+                        <div class="cs-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h4>GPS Alarm</h4>
+                        <p>Location-based alarm for commuters</p>
+                        <span class="cs-status"><i class="fas fa-wrench"></i> In Development</span>
+                    </div>
+                    <div class="cs-card">
+                        <div class="cs-icon"><i class="fas fa-question-circle"></i></div>
+                        <h4>Next Project</h4>
+                        <p>Something awesome is cooking</p>
+                        <span class="cs-status"><i class="fas fa-lightbulb"></i> Ideation</span>
+                    </div>
+                </div>
             </div>
-            <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
-            <div class="arch-layer arch-service">
-              <div class="arch-label">Service Layer</div>
-              <div class="arch-items">
-                <span>AlarmService</span>
-                <span>AlarmReceiver</span>
-              </div>
-            </div>
-            <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
-            <div class="arch-layer arch-data">
-              <div class="arch-label">Data Layer</div>
-              <div class="arch-items">
-                <span>AppDatabase</span>
-                <span>AlarmDao</span>
-                <span>Alarm</span>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
-    <!-- Developer Section -->
-    <section class="developer" id="developer">
-      <div class="container">
-        <div class="dev-card">
-          <div class="dev-avatar">
-            <div class="avatar-ring">
-              <img
-                src="https://github.com/r0drig0Dev0ps.png"
-                alt="r0drig0Dev0ps"
-                onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'flex';
-                "
-              />
-              <div class="avatar-fallback" style="display: none">
-                <i class="fas fa-user-astronaut"></i>
-              </div>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contact</span>
+                <h2>Let's <span class="gradient-text-alt">Connect</span></h2>
+                <p>Got an idea or want to collaborate? Let's talk.</p>
             </div>
-          </div>
-          <div class="dev-info">
-            <span class="dev-tag">Developer</span>
-            <h2>r0drig0Dev0ps</h2>
-            <p>
-              Android Developer passionate about creating apps that solve
-              real-world problems. Combining development skills with a DevOps
-              mindset to build, ship, and iterate fast.
-            </p>
-            <div class="dev-links">
-              <a
-                href="https://github.com/r0drig0Dev0ps"
-                target="_blank"
-                class="dev-link"
-              >
-                <i class="fab fa-github"></i>
-                GitHub
-              </a>
-              <a
-                href="https://linkedin.com/in/"
-                target="_blank"
-                class="dev-link"
-              >
-                <i class="fab fa-linkedin"></i>
-                LinkedIn
-              </a>
+            <div class="contact-grid">
+                <a href="https://github.com/r0drig0Dev0ps" target="_blank" class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <h4>GitHub</h4>
+                    <p>@r0drig0Dev0ps</p>
+                </a>
+                <a href="https://linkedin.com/in/" target="_blank" class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <h4>LinkedIn</h4>
+                    <p>Connect with me</p>
+                </a>
+                <a href="mailto:your-email@example.com" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>Send me a message</p>
+                </a>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-logo">
-            <img src="app_icon.png" alt="Math Alarm" class="footer-icon" />
-            <span>Math Alarm</span>
-          </div>
-          <p class="footer-text">
-            Made with <i class="fas fa-heart" style="color: #ff6b6b"></i> by
-            <a href="https://github.com/r0drig0Dev0ps" target="_blank"
-              >r0drig0Dev0ps</a
-            >
-          </p>
-          <p class="footer-year">&copy; 2026 — All rights reserved</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>r0drig0<span class="logo-highlight">Dev0ps</span><span class="logo-bracket"> /&gt;</span>
+                </div>
+                <p class="footer-text">
+                    Designed & built with <i class="fas fa-heart" style="color: #ff6b6b;"></i> by r0drig0Dev0ps
+                </p>
+                <p class="footer-year">&copy; 2026 — All rights reserved</p>
+            </div>
         </div>
-      </div>
     </footer>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
